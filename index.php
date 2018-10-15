@@ -111,7 +111,7 @@
                 </div>
               </div-->
               <div class="row" style="text-align: right;">
-                <a class="waves-effect waves-light btn red" id="btntaoma"><i class="material-icons left">play_for_work</i>Tạo mã</a> 
+                <a class="waves-effect waves-light btn red" id="btntaoma"><i class="material-icons left">Tạo mã</a> 
               </div>
             </div>  
             </div>  
