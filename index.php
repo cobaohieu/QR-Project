@@ -121,7 +121,7 @@
                   <div class="col s12">
                     <div style="border: 2px solid #000; border-radius: 5px; width: 245px;">
                     <div id="qrcode" class="qrcode" style="margin-top: 10px; margin-left: 20px;">
-                      <img src="lib/logo.png" class="logo">
+                      <!--img src="lib/logo.png" class="logo"-->
                     </div>
                     
                       <div style="margin-top: 10px; margin-left: 20px;">
