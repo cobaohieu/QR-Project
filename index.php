@@ -166,7 +166,7 @@
          //lấy thông tin
         $("#lblmapo").empty();
         var mapo = $("#mapo").val();
-        $("#lblmapo").text("Mã PO: " + mapo);
+        $("#lblmapo").text("Thông tin mới nhập vào là: " + mapo);
       }).
       on("keydown", function (e) {
         if (e.keyCode == 13) {
