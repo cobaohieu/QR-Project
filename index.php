@@ -153,10 +153,8 @@
     });
 
     function makeCode () {    
-      var mapo = $("#mapo").val();      
-      var mact = $("#mact").val();      
-      var soluong = $("#soluong").val();      
-      var elText = mapo + '|' + mact + '|' + soluong;
+      var mapo = $("#mapo").val();            
+      var elText = mapo;
       qrcode.makeCode(elText);
     }
 
@@ -167,14 +165,8 @@
         makeCode();
          //lấy thông tin
         $("#lblmapo").empty();
-        $("#lblmact").empty();
-        $("#lblsoluong").empty();
         var mapo = $("#mapo").val();
         $("#lblmapo").text("Mã PO: " + mapo);
-        var mact = $("#mact").val();
-        $("#lblmact").text("Mã chi tiết: " + mact);
-        var soluong = $("#soluong").val();
-        $("#lblsoluong").text("Số lượng: " + soluong);
       }).
       on("keydown", function (e) {
         if (e.keyCode == 13) {
