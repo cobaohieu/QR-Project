@@ -95,10 +95,10 @@
               <div class="row">
                 <div class="input-field col s12">
                   <input  type="text" class="validate" id="mapo">
-                  <label for="password">Mã PO</label>
+                  <label for="password">Nhập thông tin cần tạo mã</label>
                 </div>
               </div>
-              <div class="row">
+              <!--div class="row">
                 <div class="input-field col s12">
                   <input  type="text" class="validate" id="mact">
                   <label for="email">Mã chi tiết</label>
@@ -109,7 +109,7 @@
                   <input type="number" class="validate" id="soluong">
                   <label for="email">Số lượng</label>
                 </div>
-              </div>
+              </div-->
               <div class="row" style="text-align: right;">
                 <a class="waves-effect waves-light btn red" id="btntaoma"><i class="material-icons left">play_for_work</i>Tạo mã</a> 
               </div>
@@ -125,9 +125,9 @@
                     </div>
                     
                       <div style="margin-top: 10px; margin-left: 20px;">
-                        <p id="lblmapo">Mã PO: </p>
-                        <p id="lblmact">Mã chi tiết: </p>
-                        <p id="lblsoluong">Số lượng: </p>
+                        <p id="lblmapo">Thông tin cần tạo mã: </p>
+                        <!--p id="lblmact">Mã chi tiết: </p>
+                        <p id="lblsoluong">Số lượng: </p-->
                       </div>
                     </div>
                     <button class="waves-effect waves-light btn green no-print" id="btnin" style="margin-top: 10px; margin-left: 75px;"><i class="material-icons left">print</i>In mã QR</button>
