@@ -111,7 +111,7 @@
                 </div>
               </div-->
               <div class="row" style="text-align: right;">
-                <a class="waves-effect waves-light btn red" id="btntaoma"><i class="material-icons left">Tạo mã</a> 
+                <a class="waves-effect waves-light btn red" id="btntaoma"><!--i class="material-icons left"></i-->Tạo mã</a> 
               </div>
             </div>  
             </div>  
@@ -130,7 +130,7 @@
                         <p id="lblsoluong">Số lượng: </p-->
                       </div>
                     </div>
-                    <button class="waves-effect waves-light btn green no-print" id="btnin" style="margin-top: 10px; margin-left: 75px;"><i class="material-icons left">print</i>In mã QR</button>
+                    <button class="waves-effect waves-light btn green no-print" id="btnin" style="margin-top: 10px; margin-left: 75px;"><!--i class="material-icons left"></i-->In mã QR</button>
                   </div>
                   
                 </div>  
