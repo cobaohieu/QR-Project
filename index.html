@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="vi">
+    <head>
+      <meta charset="utf-8">
+      <title>Chương trình quét mã QR cơ bản</title>
+      <meta name="viewport" content="initial-scale=1, user-scalable=no, minimum-scale=1, width=device-width">
+      <meta name="theme-color" content="#ef6c00">
+      <meta name="description" content="Đọc và tạo mã QR">
+      <meta itemprop="name" content="QR Code, Trần Vũ Hiền">
+      <meta itemprop="description" content="Đọc và tạo mã QR, Trần Vũ Hiền">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black">
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/style.css">  
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+      <script type="text/javascript" src="createQR/jquery.min.js"></script>
+      <script type="text/javascript" src="createQR/qrcode.js"></script>
+      <script type="text/javascript" src="src/materialize.min.js"></script>
+      <script type="text/javascript" src="createQR/jquery.min.js"></script>
+      <script type="text/javascript" charset="utf-8" src="lib/llqrcode.js"></script>
+      <script type="text/javascript" charset="utf-8" src="lib/webqr.js"></script>
+      <script type="text/javascript" src="src/grid.js"></script>
+      <script type="text/javascript" src="src/version.js"></script>
+      <script type="text/javascript" src="src/detector.js"></script>
+      <script type="text/javascript" src="src/formatinf.js"></script>
+      <script type="text/javascript" src="src/errorlevel.js"></script>
+      <script type="text/javascript" src="src/bitmat.js"></script>
+      <script type="text/javascript" src="src/datablock.js"></script>
+      <script type="text/javascript" src="src/bmparser.js"></script>
+      <script type="text/javascript" src="src/datamask.js"></script>
+      <script type="text/javascript" src="src/rsdecoder.js"></script>
+      <script type="text/javascript" src="src/gf256poly.js"></script>
+      <script type="text/javascript" src="src/gf256.js"></script>
+      <script type="text/javascript" src="src/decoder.js"></script>
+      <script type="text/javascript" src="src/QRCode.js"></script>
+      <script type="text/javascript" src="src/findpat.js"></script>
+      <script type="text/javascript" src="src/alignpat.js"></script>
+      <script type="text/javascript" src="src/databr.js"></script>
+    </head>
+	<body>
+		<div class="container">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-2">
+          <div class="nav navbar-nav navbar-right" style="margin: 5px 0px 0px 0px;">
+            <div class="btn-group">
+              <a class="btn btn-success" href="index.html">Giới thiệu</a>
+              <a class="btn btn-info" href="make_code.html">Tạo mã</a>
+              <a class="btn btn-info" href="scan_c.html">Quét mã từ camera</a>
+              <a class="btn btn-info" href="scan_l.html">Quét mã từ ảnh</a>
+              <a class="btn btn-info" href="info.html">Thông tin</a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="navibar-header nvaibar-left" style="margin: 0px 0px 0px;">        
+              <a class="navibar-brand" href="index.html">         
+                  <h1><img src="imgs/logo.jpg"/></h1>
+              </a>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="margin-top: 20px">
+        <div class="jumbotron">
+          <p>Đôi chút về QR Code. </p>
+              - QR Code là một mã ma trận hay được gọi là mã vạch hai chiều, được xây dựng từ năm 1994 bởi công ty Denso Wave (Nhật Bản) nhằm mục đích giải mã ma trận nhanh với tốc độ cao. Ban đầu, ứng dụng QR
+              Code chủ yếu dùng vào việc quản lý kiểm kê ở nhiều ngành nghề khác nhau và được
+              sử dụng nhiều nhất ở Nhật Bản, tuy nhiên ngày nay ứng dụng của nó được phát triển
+              ở hầu hết mọi lĩnh vực và lan rộng ra nhiều quốc gia trên thế giới.
+        </div>
+        <div class="jumbotron">
+          <p>Cấu trúc của mã QR</p>
+            <img src="imgs/Qr_code_details-vi.png">
+              <br><br>
+              <b>Cấu trúc của một ký hiệu mã QR. Nhờ các hoa văn định vị, mã QR có thể được đọc ở 360°.</b>
+              <br>
+              - Khả năng lưu trữ dữ liệu mã QRcode
+              <br>
+               + Số đơn thuần: Tối đa 7.089 kí tự.
+              <br>
+              + Số và chữ cái: Tối đa 4.296 kí tự.
+              <br>
+              + Số nhị phân (8 bit): Tối đa 2.953 byte.
+              <br>
+              + Kanji/Kana: Tối đa 1.817 kí tự.
+              <br>
+              - Một máy giải mã QR có thể đọc 70% nội dung mã là đủ hiểu mã nói gì, với 30% còn lại, các nhà thiết kế tha hồ cá nhân hoá mã của công ty mình, giúp cho việc quảng cáo được hiệu quả hơn.
+              Khả năng sửa chữa lỗi
+              <br>
+               + Mức L: 7% số từ mã (codeword) có thể được phục hồi.
+              <br>
+               + Mức M:	15% số từ mã có thể được phục hồi.
+              <br>
+               + Mức Q:	25% số từ mã có thể được phục hồi.
+              <br>
+               + Mức H:	30% số từ mã có thể được phục hồi.
+        </div>         
+        <div class="jumbotron">
+            <p>QR là từ viết tắt của Quick Response (tạm dịch “Mã phản hồi nhanh”).</p>
+              Đây là một ma trận mã vạch có thể được đọc bởi máy đọc mã vạch hay smartphone (điện thoại
+              thông minh) có chức năng chụp ảnh với ứng dụng chuyên biệt để quét mã vạch. QR
+              code gồm những module màu đen được xắp xếp ngẫu nhiên trong một ô vuông có nền
+              trắng. Sự tổ hợp những module này mã hóa cho bất kì dữ liệu trực tuyến bao gồm:
+              link dẫn đến trang web, hình ảnh, thông tin, chi tiết về sản phẩm, quảng cáo cho sản
+              phẩm.v.v...
+        </div>
+        <div class="jumbotron">
+            <p>QR được tạo ra để làm gì?</p>
+              QR code dùng để kiểm kê hàng hóa, thông tin sản phẩm
+              trong kho; thông tin cá nhân: trên card visit; lưu trữ URL: điện thoại chỉ việc đọc QR
+              Code để lấy URL, sau đó tự động mở trình duyệt; dử dụng tại các bến xe bus, xe lửa,
+              tàu điện ngầm: người sử dụng khi quét mã QR Code của bến xe sẽ biết thông tin về
+              các chuyến xe; sử dụng tại các Viện bảo tàng: người sử dụng chỉ cần quét mã QR
+              Code đặt cạnh vật trưng bày là biết được thông tin chi tiết và cập nhật về đồ vật đó; sử
+              dụng để mua hàng ở bất kỳ đâu: người sử dụng khi đi tàu điện ngầm, xe bus … nếu
+              thấy thích mặt hàng đang quảng cáo trên đó có thể đặt mua ngay lập tức thông qua
+              QR Code và Mobile Internet..v.v…
+            </p>
+          <div class="other" style="text-align: right"><i><a href="https://vi.wikipedia.org/wiki/Mã_QR">Tham khảo: https://vi.wikipedia.org/wiki/Mã_QR</a></i></div>
+        </div>
+      </div>
+    <footer>
+      <p style="text-align: center; margin-top: 10px;">© Bản quyền thuộc về Trần Vũ Hiền.</p>
+      <div class="col-sm-10 col-sm-offset-2">
+        <ul class="nav navbar-nav navbar-right nav-pills nav-default">
+          <div class="btn-group">
+            <a class="btn" href="index.html">Trang chủ</a>
+            <a class="btn" href="make_code.html">Tạo mã</a>
+            <a class="btn" href="scan_c.html">Quét mã từ camera</a>
+            <a class="btn" href="scan_l.html">Quét mã từ ảnh</a>
+            <a class="btn" href="info.html">Thông tin</a>
+          </div>
+        </ul>
+      </div>
+    </footer>
+		</div>
+	</body>
+</html>
