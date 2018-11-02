@@ -71,8 +71,7 @@
         <div class="jumbotron" style="margin-left: 60px;text-align: center; margin-top: 5px">
           <div style="margin: 0 auto; text-align: center; width: 500px" class="z-depth-2">
             <div id="mainbody" style="display: inline;">
-              <table>
-                <tbody>
+              <table border="0">
                   <tr>                
                     <td><img class="selector" id="webcamimg" onclick="setwebcam()" style="text-align: left;" style="opacity: 1;">
                     </td>
@@ -84,15 +83,6 @@
                       <div id="outdiv" style="margin-top: 15px; padding: 10px; margin-left: 0px;"><video id="v" autoplay=""></video></div>
                     </td>
                   </tr>
-                </tbody>
-                  </td>
-                </tr>
-                <tr>
-                  <td colspan="3" style="text-align: center">  
-                  </td>
-                  <td>
-                  </td>
-                </tr>
                 <tr>
                   <td colspan="3" style="text-align: center">
                     <div style="text-align: center; margin-right: 10px;">
@@ -102,9 +92,7 @@
                   </td>
                   <td>
                     <div class="card-panel grey lighten-5 z-depth-1">             
-                      <div id="mapo" style="padding-top: 10px;">&nbsp;</div>
-                      <div id="mact">&nbsp;</div>
-                      <div id="soluong" style="padding-bottom: 10px;" >&nbsp;</div>              
+                      <div id="result">&nbsp;</div>          
                     </div>
                     <canvas id="canvas" width="470" height="353"></canvas>
                   </td>
@@ -129,5 +117,6 @@
         </div>
       </footer>
 		</div>
+    <script type="text/javascript">load();</script>
   </body>
  </html>
