@@ -49,8 +49,8 @@ input[type="button"]{
     display:none;
 }
 #v{
-  width: 470px;
-  height: 352px;
+  width: 800px;
+  height: 600px;
 }
 @page :left {
   margin-left: 3cm;
