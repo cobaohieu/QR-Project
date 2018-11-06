@@ -71,7 +71,8 @@
         <div class="jumbotron" style="margin-left: 60px;text-align: center; margin-top: 5px">
           <div style="margin: 0 auto; text-align: center; width: 500px" class="z-depth-2">
             <div id="mainbody" style="display: inline;">
-              <table style="border: 0">
+              <table>
+                <tbody>
                   <tr>                
                     <td><img class="selector" id="webcamimg" onclick="setwebcam()" style="text-align: left;" style="opacity: 1;">
                     </td>
@@ -83,8 +84,15 @@
                       <div id="outdiv" style="margin-top: 15px; padding: 10px; margin-left: 0px;"><video id="v" autoplay=""></video></div>
                     </td>
                   </tr>
-              </table>
-              <table>
+                </tbody>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="3" style="text-align: center">  
+                  </td>
+                  <td>
+                  </td>
+                </tr>
                 <tr>
                   <td colspan="3" style="text-align: center">
                     <div style="text-align: center; margin-right: 10px;">
@@ -93,13 +101,15 @@
                     </div>
                   </td>
                   <td>
-                    <div class="card-panel grey lighten-5 z-depth-1">                   
-                    <div id="mapo">&nbsp;</div>                 
-                  </div>
+                    <div class="card-panel grey lighten-5 z-depth-1">             
+                      <div id="mapo" style="padding-top: 10px;">&nbsp;</div>
+                      <div id="mact">&nbsp;</div>
+                      <div id="soluong" style="padding-bottom: 10px;" >&nbsp;</div>              
+                    </div>
+                    <canvas id="canvas" width="470" height="353"></canvas>
                   </td>
                 </tr>
             </table>
-            <canvas id="canvas" width="470px" height="352px"></canvas>
             </div>
           </div>        
         </div>
@@ -118,6 +128,6 @@
           </ul>
         </div>
       </footer>
-	</div>
+		</div>
   </body>
  </html>
